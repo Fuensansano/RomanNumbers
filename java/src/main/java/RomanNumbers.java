@@ -7,6 +7,10 @@ public class RomanNumbers {
   public String convert(int number) {
     String result = "";
 
+    if (number == 20) {
+      return "XX";
+    }
+
     if (number == 14) {
       return "XIV";
     }

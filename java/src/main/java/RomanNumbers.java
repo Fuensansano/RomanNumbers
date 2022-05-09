@@ -6,6 +6,10 @@ public class RomanNumbers {
       return "V";
     }
 
+    if (number == 4) {
+      return "IV";
+    }
+
     String result = "";
     for (int i = 0; i < number; i++) {
       result += "I";

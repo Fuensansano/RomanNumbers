@@ -2,14 +2,12 @@
 public class RomanNumbers {
 
   public String convert(int number) {
-    if (number == 2) {
-      return "II";
+
+    String result = "";
+    for (int i = 0; i < number; i++) {
+      result += "I";
     }
 
-    if (number == 3) {
-      return "III";
-    }
-
-    return "I";
+    return result;
   }
 }

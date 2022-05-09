@@ -17,4 +17,10 @@ public class RomanNumbersShould {
     assertEquals("II", romanNumbers.convert(2));
   }
 
+  @Test
+  public void should_return_III_when_given_3() {
+    RomanNumbers romanNumbers = new RomanNumbers();
+    assertEquals("III", romanNumbers.convert(3));
+  }
+
 }

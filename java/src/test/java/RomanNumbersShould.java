@@ -37,4 +37,9 @@ public class RomanNumbersShould {
     assertEquals("V", romanNumbers.convert(5));
   }
 
+  @Test
+  public void should_return_VI_when_given_6() {
+    assertEquals("VI", romanNumbers.convert(6));
+  }
+
 }

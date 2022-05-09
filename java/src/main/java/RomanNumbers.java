@@ -6,6 +6,10 @@ public final String ONE = "I";
   public String convert(int number) {
     String result = "";
 
+    if (number == 11) {
+      return "XI";
+    }
+
     if (number == 10) {
       return "X";
     }

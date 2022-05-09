@@ -28,6 +28,11 @@ public class RomanNumbersShould {
   }
 
   @Test
+  public void should_return_IV_when_given_4() {
+    assertEquals("IV", romanNumbers.convert(4));
+  }
+
+  @Test
   public void should_return_V_when_given_5() {
     assertEquals("V", romanNumbers.convert(5));
   }

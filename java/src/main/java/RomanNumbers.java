@@ -11,10 +11,8 @@ public final String ONE = "I";
     }
 
     if (number > 5) {
-      for (int i = 5; i < number; i++) {
-        result += ONE;
-      }
-      return FIVE + result;
+      number = number - 5;
+      result += FIVE;
     }
 
     if (number == 5) {
@@ -25,10 +23,17 @@ public final String ONE = "I";
       return "IV";
     }
 
-    for (int i = 0; i < number; i++) {
-      result += "I";
-    }
+    result += appendCharacter(number);
 
     return result;
   }
+
+  private String appendCharacter(int number) {
+    String result = "";
+    for (int i = 0; i < number; i++) {
+      result += "I";
+    }
+    return result;
+  }
+
 }

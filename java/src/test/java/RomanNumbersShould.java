@@ -51,4 +51,9 @@ public class RomanNumbersShould {
   public void should_return_X_when_given_10() {
     assertEquals("X", romanNumbers.convert(10));
   }
+
+  @Test
+  public void should_return_XI_when_given_11() {
+    assertEquals("XI", romanNumbers.convert(11));
+  }
 }

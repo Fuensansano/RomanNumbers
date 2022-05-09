@@ -46,4 +46,9 @@ public class RomanNumbersShould {
   public void should_return_IX_when_given_9() {
     assertEquals("IX", romanNumbers.convert(9));
   }
+
+  @Test
+  public void should_return_X_when_given_10() {
+    assertEquals("X", romanNumbers.convert(10));
+  }
 }

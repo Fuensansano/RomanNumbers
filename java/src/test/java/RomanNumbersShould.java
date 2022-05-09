@@ -27,4 +27,9 @@ public class RomanNumbersShould {
     assertEquals("III", romanNumbers.convert(3));
   }
 
+  @Test
+  public void should_return_V_when_given_5() {
+    assertEquals("V", romanNumbers.convert(5));
+  }
+
 }

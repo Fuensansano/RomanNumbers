@@ -30,7 +30,7 @@ public class RomanNumbersShould {
       "XXIV, 24",
       "XL, 40",
       "L, 50",
-      "XC, 90"
+      "XC, 90",
   })
   public void should_return_roman_number_when_given_decimal_number(String romanNumber, int decimalNumber) {
     assertEquals(romanNumber, romanNumbers.convert(decimalNumber));

@@ -1,5 +1,6 @@
 public class RomanNumbers {
   public enum DecimalToRomanNumber {
+    NINE_HUNDRED ("CM", 900),
     FIVE_HUNDRED ("D", 500),
     FOUR_HUNDRED ("CD", 400),
     HUNDRED ("C", 100),

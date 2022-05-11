@@ -1,10 +1,19 @@
-
 public class RomanNumbers {
-  public final String ONE = "I";
-  public final String FOUR = "IV";
-  public final String FIVE = "V";
-  public final String NINE = "IX";
-  public final String TEN = "X";
+  public enum DecimalToRomanNumber {
+    TEN ("X", 10),
+    NINE ("IX", 9),
+    FIVE ("V", 5),
+    FOUR ("IV", 4),
+    ONE ("I", 1);
+
+    private final String romanNumber;
+    private final int decimalNumber;
+
+    DecimalToRomanNumber(String romanNumber, int decimalNumber) {
+      this.romanNumber = romanNumber;
+      this.decimalNumber = decimalNumber;
+    }
+  }
 
   public String convert(int number) {
     String result = "";
@@ -17,7 +26,6 @@ public class RomanNumbers {
       return "XX";
     }
 
-
     result += appendCharacter(number);
 
     return result;
@@ -26,32 +34,16 @@ public class RomanNumbers {
   private String appendCharacter(int number) {
     String result = "";
 
-    int[] decimalNumbers = {1,4,5,9,10};
-    String[] romanNumbers = {"I","IV","V","IX","X"};
+    for (DecimalToRomanNumber decimalToRomanNumber : DecimalToRomanNumber.values()) {
 
-
-    if (number >= 10) {
-      number = number - 10;
-      result += TEN;
-    }
-
-    if (number == 9) {
-      number = number - 9;
-      result += NINE;
-    }
-
-    if (number >= 5) {
-      number = number - 5;
-      result += FIVE;
-    }
-
-    if (number == 4) {
-      number = number - 4;
-      result += FOUR;
+      if (number >= decimalToRomanNumber.decimalNumber) {
+        number = number - decimalToRomanNumber.decimalNumber;
+        result += decimalToRomanNumber.romanNumber;
+      }
     }
 
     for (int i = 0; i < number; i++) {
-      result += ONE;
+      result += "I";
     }
 
     return result;

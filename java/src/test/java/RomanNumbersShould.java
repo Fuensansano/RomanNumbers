@@ -17,29 +17,35 @@ public class RomanNumbersShould {
 
   @ParameterizedTest
   @CsvSource({
-      "I, 1",
       "III, 3",
-      "IV, 4",
-      "V, 5",
-      "IX, 9",
-      "X, 10",
       "XI, 11",
       "XIV, 14",
       "XV, 15",
       "XIX, 19",
       "XX, 20",
       "XXIV, 24",
-      "XL, 40",
-      "L, 50",
-      "XC, 90",
-      "C, 100",
-      "CD, 400",
-      "D, 500"
   })
   public void should_return_roman_number_when_given_decimal_number(String romanNumber, int decimalNumber) {
     assertEquals(romanNumber, romanNumbers.convert(decimalNumber));
   }
 
+  @ParameterizedTest
+  @CsvSource({
+    "I, 1",
+    "IV, 4",
+    "V, 5",
+    "IX, 9",
+    "X, 10",
+    "XL, 40",
+    "L, 50",
+    "XC, 90",
+    "C, 100",
+    "CD, 400",
+    "D, 500"
+  })
+  public void should_return_unit_roman_number_when_given_decimal_number(String romanNumber, int decimalNumber) {
+    assertEquals(romanNumber, romanNumbers.convert(decimalNumber));
+  }
   @Test
   public void should_can_not_convert_to_roman_number() {
     Assertions.assertThrows(IllegalArgumentException.class, () -> {

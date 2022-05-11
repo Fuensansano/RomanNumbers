@@ -22,9 +22,7 @@ public class RomanNumbers {
   }
 
   public String convert(int number) {
-    if (number == 0) {
-      throw new IllegalArgumentException();
-    }
+    isValidNumber(number);
 
     String result = "";
 
@@ -37,6 +35,12 @@ public class RomanNumbers {
     }
 
     return result;
+  }
+
+  private void isValidNumber(int number) {
+    if (number == 0) {
+      throw new IllegalArgumentException();
+    }
   }
 
   private String appendCharacter(int number, String character) {

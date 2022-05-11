@@ -1,5 +1,6 @@
 public class RomanNumbers {
   public enum DecimalToRomanNumber {
+    HUNDRED ("C", 100),
     NINETY ("XC", 90),
     FIFTY ("L", 50),
     FORTY ("XL", 40),

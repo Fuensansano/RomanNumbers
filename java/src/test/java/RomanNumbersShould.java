@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -37,5 +38,12 @@ public class RomanNumbersShould {
   })
   public void should_return_roman_number_when_given_decimal_number(String romanNumber, int decimalNumber) {
     assertEquals(romanNumber, romanNumbers.convert(decimalNumber));
+  }
+
+  @Test
+  public void should_can_not_convert_to_roman_number() {
+    Assertions.assertThrows(IllegalArgumentException.class, () -> {
+      romanNumbers.convert(0);
+    });
   }
 }

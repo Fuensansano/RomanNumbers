@@ -2,7 +2,6 @@ public class RomanNumbers {
   public enum DecimalToRomanNumber {
     FIFTY ("L", 50),
     FORTY ("XL", 40),
-    //TWENTY ("XX", 20),
     TEN ("X", 10),
     NINE ("IX", 9),
     FIVE ("V", 5),
@@ -25,13 +24,11 @@ public class RomanNumbers {
 
       if (number >= decimalToRomanNumber.decimalNumber) {
         result += appendCharacter(number / decimalToRomanNumber.decimalNumber, decimalToRomanNumber.romanNumber);
-        number =  number % decimalToRomanNumber.decimalNumber;
+        number %= decimalToRomanNumber.decimalNumber;
       }
     }
 
-
     return result;
-
   }
 
   private String appendCharacter(int number, String character) {

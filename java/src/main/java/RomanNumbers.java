@@ -22,6 +22,10 @@ public class RomanNumbers {
   }
 
   public String convert(int number) {
+    if (number == 0) {
+      throw new IllegalArgumentException();
+    }
+
     String result = "";
 
     for (DecimalToRomanNumber decimalToRomanNumber : DecimalToRomanNumber.values()) {

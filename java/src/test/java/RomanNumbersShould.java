@@ -32,7 +32,8 @@ public class RomanNumbersShould {
       "L, 50",
       "XC, 90",
       "C, 100",
-      "CD, 400"
+      "CD, 400",
+      "D, 500"
   })
   public void should_return_roman_number_when_given_decimal_number(String romanNumber, int decimalNumber) {
     assertEquals(romanNumber, romanNumbers.convert(decimalNumber));

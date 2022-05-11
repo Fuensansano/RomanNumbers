@@ -24,6 +24,7 @@ public class RomanNumbersShould {
       "XIX, 19",
       "XX, 20",
       "XXIV, 24",
+      "CLIV, 154",
   })
   public void should_return_roman_number_when_given_decimal_number(String romanNumber, int decimalNumber) {
     assertEquals(romanNumber, romanNumbers.convert(decimalNumber));

@@ -40,7 +40,7 @@ public class RomanNumbers {
   }
 
   private void isValidNumber(int number) {
-    if (number == 0) {
+    if (number <= 0) {
       throw new IllegalArgumentException();
     }
   }

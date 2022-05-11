@@ -19,14 +19,6 @@ public class RomanNumbers {
   public String convert(int number) {
     String result = "";
 
-    if (number == 21) {
-      return "XXI";
-    }
-
-    if (number == 20) {
-      return "XX";
-    }
-
     result += appendCharacter(number);
 
     return result;
